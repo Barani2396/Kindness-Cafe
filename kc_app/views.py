@@ -4,7 +4,10 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse('<h1>Kindess Cafe</h1><p>This is my first site, where i use django for backend and i really like this routing concept. Soon i will add more functionality to this site.</p>')
+    return render(request, 'kc_app/home.html')
+
+def cat_services(request):
+    return render(request, 'kc_app/cat_services.html')
 
 def about(request):
-    return HttpResponse('<h1>About - Kindness Cafe</h1>')
+    return render(request, 'kc_app/about.html')
