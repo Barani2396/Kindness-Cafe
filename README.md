@@ -1,2 +1,2 @@
 # Kindness-Cafe
- Simple catering site - using django
+Catering site - using django
