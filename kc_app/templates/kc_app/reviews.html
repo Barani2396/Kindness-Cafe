@@ -1,7 +1,14 @@
 {% extends "kc_app/base.html" %} {% block content %}
 <h1>Our valuable customers critiques</h1>
 {% for post in reviews_d %}
-<h3>{{ post.r_title }}</h3>
-<p>By {{ post.customer }} on {{ post.date }}</p>
-<p>{{ post.content }}</p>
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">{{ post.customer }}</a>
+            <small class="text-muted">{{ post.date }}</small>
+        </div>
+        <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+        <p class="article-content">{{ post.content }}</p>
+    </div>
+</article>
 {% endfor %} {% endblock %}
