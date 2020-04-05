@@ -4,5 +4,8 @@ from . import views
 urlpatterns = [
     path('', views.home, name='kc_app-home'),
     path('about/', views.about, name='kc_app-about'),
-    path('cat_services', views.cat_services, name="kc_app-cat_services"),
+    path('services/', views.cat_services, name="kc_app-cat_services"),
+    path('order_online/', views.order_online, name="kc_app-order_online"),
+    path('reviews/', views.reviews, name="kc_app-reviews"),
+    path('donate/', views.donate, name="kc_app-donate"),
 ]
