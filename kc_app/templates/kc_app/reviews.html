@@ -1,5 +1,7 @@
-{% extends "kc_app/base.html" %}
-
-{% block content %}
-    
-{% endblock %}
+{% extends "kc_app/base.html" %} {% block content %}
+<h1>Our valuable customers critiques</h1>
+{% for post in reviews_d %}
+<h3>{{ post.r_title }}</h3>
+<p>By {{ post.customer }} on {{ post.date }}</p>
+<p>{{ post.content }}</p>
+{% endfor %} {% endblock %}
