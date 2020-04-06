@@ -35,13 +35,15 @@ def order_online(request):
 
 def reviews(request):
     contexts = {
-        'reviews_d': reviews_d, 
+        'reviews_d': reviews_d,
         'title': 'Reviews',
     }
     return render(request, 'kc_app/reviews.html', contexts)
 
+
 def contact_us(request):
     return render(request, 'kc_app/contact.html', {'title': 'Contact us'})
+
 
 def donate(request):
     return render(request, 'kc_app/donate.html', {'title': 'Donate'})
