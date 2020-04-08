@@ -1,24 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from kc_app.models import Review
 
 # Create your views here.
-
-reviews_d = [
-    {
-        'customer': 'Joshua',
-        'r_title': 'Review 1',
-        'content': 'Service is literally good.',
-        'date': 'March 23, 2020'
-    },
-
-    {
-        'customer': 'Sid',
-        'r_title': 'Review 2',
-        'content': 'Service is ok.',
-        'date': 'January 05, 2020',
-    }
-
-]
 
 
 def home(request):
@@ -35,7 +19,7 @@ def order_online(request):
 
 def reviews(request):
     contexts = {
-        'reviews_d': reviews_d,
+        'reviews_d': Review.objects.all(),
         'title': 'Reviews',
     }
     return render(request, 'kc_app/reviews.html', contexts)
