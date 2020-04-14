@@ -14,7 +14,7 @@ def cat_services(request):
 
 
 def order_online(request):
-    return render(request, 'kc_app/order_online.html', {'title': 'Online Order'})
+    return render(request, 'kc_app/order_online.html', {'title': 'Order Online'})
 
 
 def reviews(request):

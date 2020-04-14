@@ -10,9 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'kc_app/css/bootstrap.css' %}">
-
-    <link rel="stylesheet" type="text/css" href="{% static 'kc_app/main.css' %}"> {% if title %}
+    <link rel="stylesheet" type="text/css" href="{% static 'kc_app/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'kc_app/css/main.css' %}">
+    <!-- JS -->
+    <link rel="js" href="{% static 'kc_app/js/main.js' %}"> {% if title %}
     <title>Kindness Cafe | {{ title }}</title>
     {% else %}
     <title>Kindness Cafe </title>
@@ -21,23 +22,22 @@
 </head>
 
 <body>
+
     <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-light bold bg-steel fixed-top">
+        <nav class="navbar navbar-expand-md navbar-light bg-light static-top mb-5 shadow">
             <div class="container">
-                <a class="navbar-brand mr-4 nav-font1" href="{% url 'kc_app-home' %}"><b>Kindness Cafe</b></a>
+                <a class="navbar-brand mr-4" href="{% url 'kc_app-home' %}"><b>Kindness Cafe</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto nav-font2 ">
-                        <a class="nav-item nav-link" href="{% url 'kc_app-home' %}">Home</a>
+                    <div class="navbar-nav mr-auto">
+                        <a class="nav-item nav-link active" href="{% url 'kc_app-home' %}">Home</a>
                         <a class="nav-item nav-link" href="{% url 'kc_app-cat_services' %}">Services</a>
-                        <a class="nav-item nav-link" href="{% url 'kc_app-order_online' %}">Order Online</a>
+                        <a class="nav-item nav-link" href="{% url 'kc_app-order_online' %}">Order online</a>
                         <a class="nav-item nav-link" href="{% url 'kc_app-reviews' %}">Reviews</a>
-                        <a class="nav-item nav-link" href="{% url 'kc_app-contact' %}">Contacts us</a>
                     </div>
-                    <!-- Navbar Right Side -->
-                    <div class="navbar-nav nav-font2">
+                    <div class="navbar-nav">
                         <a class="nav-item nav-link" href="{% url 'kc_app-donate' %}">Donate</a>
                         <a class="nav-item nav-link" href="{% url 'kc_app-about' %}">About</a>
                     </div>
@@ -45,25 +45,13 @@
             </div>
         </nav>
     </header>
-    <main role="main" class="container">
-        <div class="card border-0 shadow my-5">
-            <div class="card-body p-5">
-                <div class="row">
-                    <div class="col-md-8">
+
+    <main role="main">
+        <div style="background-image: url('static/kc_app/images/bg.jpg')">
+            <div class="container">
+                <div class=" card border-0 shadow my-5 ">
+                    <div class="card-body p-5 ">
                         {% block content %}{% endblock %}
-                    </div>
-                    <div class="col-md-4">
-                        <div class="content-section">
-                            <h3>Our Sidebar</h3>
-                            <p class='text-muted'>You can put any information here you'd like.
-                                <ul class="list-group">
-                                    <li class="list-group-item list-group-item-light">Latest Posts</li>
-                                    <li class="list-group-item list-group-item-light">Announcements</li>
-                                    <li class="list-group-item list-group-item-light">Calendars</li>
-                                    <li class="list-group-item list-group-item-light">etc</li>
-                                </ul>
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -72,9 +60,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
 
 </body>
 
