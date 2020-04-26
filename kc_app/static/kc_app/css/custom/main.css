@@ -1,0 +1,26 @@
+.site-header .navbar-nav .nav-item {
+    color: whitesmoke;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: greenyellow;
+}
+
+.site-header .navbar-nav .nav-link:active {
+    color: greenyellow;
+}
+
+.custom-headline span::before {
+    border-bottom-color: rgba(56, 247, 8, 0.15);
+    border-top-color: rgba(56, 247, 8, 0.15);
+}
+
+.custom-headline span::after {
+    border-bottom-color: rgba(56, 247, 8, 0.15);
+    border-top-color: rgba(56, 247, 8, 0.15);
+}
+
+.rounded-circle {
+    border-radius: 50%;
+    width: 150px;
+}

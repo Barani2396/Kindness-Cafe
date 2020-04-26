@@ -1,4 +1,40 @@
 {% extends "kc_app/base.html" %} {% block content %}
-<h1>Social impact is on the menu</h1>
-<p>When you do service with us, you build a comunity and help the poverty cycle.</p>
+<div class="card border-0 shadow my-1">
+    <div class="card-body">
+        <article style="text-align: center;">
+            <h2 class="custom-headline"><span>Catering At Its Finest</span></h2>
+            <p>Welcome to Kindness Cafe: Fine food catering in Windsor, Ontario<br>We make food and events memorable</p>
+            <div class=" container my-4">
+                <!--Grid row starts-->
+                <div class="row justify-content-md-center">
+                    <!--Grid column 1 starts-->
+                    <div class="col col-lg-2 mb-1">
+                        <img class="rounded-circle shadow" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_900,c_fill,g_auto,h_506,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F160929095729-essential-spanish-dish-fideua-brindisa.jpg" style="border-radius: 50%;">
+                    </div>
+                    <!--Grid column 1 ends-->
+                    <!--Grid column 2 starts-->
+                    <div class="col col-lg-2  mb-1">
+                        <img class="rounded-circle shadow" src="https://www.theindianwire.com/wp-content/uploads/2018/02/pasta_625x350_51467797057.jpg" data-holder-rendered="true">
+                    </div>
+                    <!--Grid column 2 ends-->
+                    <!--Grid column 3 starts-->
+                    <div class="col col-lg-2  mb-1">
+                        <img class="rounded-circle shadow" src="https://www.bonappetour.com/blog/wp-content/uploads/2015/03/1426576690-7820792-1030x521.jpeg" data-holder-rendered="true">
+                    </div>
+                    <!--Grid column 3 ends-->
+                </div>
+                <!--Grid row ends-->
+            </div>
+        </article>
+    </div>
+</div>
+<div class="card border-0 shadow my-1">
+    <div class="card-body">
+        <article class="my-1" style="text-align: center;">
+            <h2>Let us make your next event a delicious success</h2>
+            <br>
+            <a href="{% url 'kc_app-contact' %}"><button type="button" class="btn btn-primary">Book your events now</button></a>
+        </article>
+    </div>
+</div>
 {% endblock %}

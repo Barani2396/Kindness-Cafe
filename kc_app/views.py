@@ -29,9 +29,5 @@ def contact_us(request):
     return render(request, 'kc_app/contact.html', {'title': 'Contact us'})
 
 
-def donate(request):
-    return render(request, 'kc_app/donate.html', {'title': 'Donate'})
-
-
 def about(request):
     return render(request, 'kc_app/about.html', {'title': 'About'})

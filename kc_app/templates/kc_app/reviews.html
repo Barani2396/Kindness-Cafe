@@ -1,14 +1,18 @@
 {% extends "kc_app/base.html" %} {% block content %}
-<h1>Our valuable customers critiques</h1>
-{% for post in reviews_d %}
-<article class="media content-section">
-    <div class="media-body">
-        <div class="article-metadata">
-            <a class="mr-2" href="#">{{ post.customer }}</a>
-            <small class="text-muted">{{ post.date_posted|date:"M d, Y" }}</small>
-        </div>
-        <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
-        <p class="article-content">{{ post.content }}</p>
+<div class="card border-0 shadow my-1">
+    <div class="card-body">
+        <h2>Our valuable customers critiques</h2>
+        {% for post in reviews_d %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ post.customer }}</a>
+                    <small class="text-muted">{{ post.date_posted|date:"M d, Y" }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
     </div>
-</article>
+</div>
 {% endfor %} {% endblock %}

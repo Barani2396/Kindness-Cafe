@@ -11,7 +11,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'kc_app/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'kc_app/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'kc_app/css/custom/main.css' %}">
     <!-- JS -->
     <link rel="js" href="{% static 'kc_app/js/main.js' %}"> {% if title %}
     <title>Kindness Cafe | {{ title }}</title>
@@ -21,46 +21,45 @@
 
 </head>
 
-<body>
+<body style="margin: 0;padding: 0;background-repeat: no-repeat;background-image: url('/static/kc_app/images/bg.jpg');background-size: cover;">
 
     <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-light bg-light static-top mb-5 shadow">
+        <!--Navbar starts-->
+        <nav class="navbar navbar-expand-md navbar-dark static-top mb-5">
             <div class="container">
-                <a class="navbar-brand mr-4" href="{% url 'kc_app-home' %}"><b>Kindness Cafe</b></a>
+                <a class="navbar-brand mr-4" href="{% url 'kc_app-home' %}"><b style="font-family: Arial, Helvetica, sans-serif;">Kindness Cafe</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link active" href="{% url 'kc_app-home' %}">Home</a>
-                        <a class="nav-item nav-link" href="{% url 'kc_app-cat_services' %}">Services</a>
-                        <a class="nav-item nav-link" href="{% url 'kc_app-order_online' %}">Order online</a>
-                        <a class="nav-item nav-link" href="{% url 'kc_app-reviews' %}">Reviews</a>
+                        <a class="nav-item nav-link" href="{% url 'kc_app-home' %}">HOME</a>
+                        <a class="nav-item nav-link" href="{% url 'kc_app-cat_services' %}">SERVICES</a>
+                        <a class="nav-item nav-link" href="{% url 'kc_app-order_online' %}">ORDER ONLINE</a>
+                        <a class="nav-item nav-link" href="{% url 'kc_app-reviews' %}">REVIEWS</a>
                     </div>
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="{% url 'kc_app-donate' %}">Donate</a>
-                        <a class="nav-item nav-link" href="{% url 'kc_app-about' %}">About</a>
+                        <a class="nav-item nav-link" href="{% url 'kc_app-contact' %}">CONTACT US</a>
+                        <a class="nav-item nav-link" href="{% url 'kc_app-about' %}">ABOUT</a>
                     </div>
                 </div>
             </div>
         </nav>
+        <!--Navbar ends-->
     </header>
 
 
     <main role="main">
-        <div>
-            <img src="{% static '/kc_app/images/bg.jpg' %}" class="img-fluid bg-image">
-        </div>
         <div class="container">
-            <div class=" card border-0 shadow my-5 ">
-                <div class="card-body p-4 ">
-                    {% block content %}{% endblock %}
-                </div>
-            </div>
+            {% block content %}{% endblock %}
         </div>
     </main>
 
-    <!-- Optional JavaScript <div class="bg_main" style="background-image: url('static/kc_app/images/bg.jpg')">-->
+    <footer>
+
+    </footer>
+
+    <!-- Optional JavaScript <div class="bg_main " style="background-image: url( 'static/kc_app/images/bg.jpg') ">-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
