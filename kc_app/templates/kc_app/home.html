@@ -1,6 +1,6 @@
 {% extends "kc_app/base.html" %} {% block content %}
 <div class="card border-0 shadow my-1">
-    <div class="card-body">
+    <div class="card-body m-4">
         <article style="text-align: center;">
             <h2 class="custom-headline"><span>Catering At Its Finest</span></h2>
             <p>Welcome to Kindness Cafe: Fine food catering in Windsor, Ontario<br>We make food and events memorable</p>
@@ -29,11 +29,31 @@
     </div>
 </div>
 <div class="card border-0 shadow my-1">
-    <div class="card-body">
+    <div class="card-body m-3">
         <article class="my-1" style="text-align: center;">
-            <h2>Let us make your next event a delicious success</h2>
+            <h3>Let us make your next event a delicious success</h3>
             <br>
-            <a href="{% url 'kc_app-contact' %}"><button type="button" class="btn btn-primary">Book your events now</button></a>
+            <a href="{% url 'kc_app-contact' %}">
+                <button type="button" class="btn btn-primary">Book your events now</button>
+            </a>
+        </article>
+    </div>
+</div>
+<div class="card border-0 shadow my-1">
+    <div class="card-body m-3">
+        <article class="my-1" style="text-align: center;">
+            <p>Whether you’re entertaining friends in the comfort of your home, having a family celebration, cocktail party, anniversary or retirement party, our talented and fun catering team is focused to ensure you and your guests remember an event that
+                reflects your personal style and great taste.</p>
+        </article>
+    </div>
+</div>
+<div class="card border-0 shadow my-1">
+    <div class="card-body m-3">
+        <article>
+            <h3 style="text-align: center;">Why Choose Kindness Cafe Cuisine to Cater Your Event?</h3>
+            <br>
+            <p class="col" style="text-align: left;">Because we treat every event as special. We realize that our reputation is only as good as the hors d’oeuvres, entrées or desserts that come out of our kitchen. We are passionate about food. In season, we organically grow our own vegetables
+                including heirloom tomatoes, coloured carrots and beets and different varieties of potatoes and tender greens.</p>
         </article>
     </div>
 </div>

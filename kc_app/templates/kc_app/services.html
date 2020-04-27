@@ -1,9 +1,99 @@
 {% extends "kc_app/base.html" %} {% block content %}
 <div class="card border-0 shadow my-1">
-    <div class="card-body">
+    <div class="card-body m-4">
         <article style="text-align: center;">
-            <h2>Services </h2>
+            <h2>Catering Services For Any Occasions!</h2>
+            <br>
+            <p>Kindness Cafe Cuisine knows how to deliver great food and service. When you team up with Kindness Cafe Cuisine your guests will be treated to the freshest ingredients Ontario has to offer – all exquisitely prepared and served with a sense
+                of style.
+            </p>
         </article>
+    </div>
+</div>
+<div class="card border-0 shadow my-1">
+    <div class="card-body m-3">
+        <article>
+            <h3>Great Food, Great Price!</h3>
+            <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+            <p>“…for the price, the service, and the exceptional food you CANNOT beat Kindness Cafe Cuisine. We have hosted and attended several events and they simply are the only catering company that we will hire or recommend!”.
+            </p>
+            <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+            <p>We provide in-home full service catering and specialize in formal, served dinners for smaller groups, larger-group buffet dinners, and cocktail parties. Our focus is to provide our clients with the finest quality foods and professional service.
+                Whether you need a fully staffed event or just want delicious food delivered to your door, we can help create memorable family gatherings, special celebrations and elegant parties. Over the years, we have garnered a loyal customer base
+                with our comfort foods, classic dishes and creative specialties.</p>
+            <br>
+            <h3>Be a guest at your own party!</h3>
+            <p>Sit back, relax, and enjoy every bite as we cater to you, because even the host of a party should have fun!</p>
+            <div class="card border-0 shadow" style="border-radius: 1em;">
+                <div class="card-body" style="background-color: #696969;border-radius: 1em;">
+                    <article style="text-align: center; color: blanchedalmond;">
+                        <h2>Planning an Event?</h2>
+                        <p>Whether you’re planning an intimate party, a cocktail party, reception, a gala or going to the cottage for the weekend with some friends, we can take care of all your food and service needs.</p>
+                        <a href="{% url 'kc_app-contact' %}">
+                            <button type="button" class="btn btn-primary">+ Book your events now +</button>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </article>
+        <br>
+        <br>
+        <article>
+            <h3>Rentals And Service For Your Party</h3>
+            <p>We can arrange all your food service needs, including:</p>
+            <ul>
+                <li>Dishes</li>
+                <li>Cutlery</li>
+                <li>Tables & Chairs</li>
+                <li>Table Linens</li>
+                <li>…and more!</li>
+            </ul>
+        </article>
+        <br>
+        <article>
+            <h3>We Cater Any Kind of Party</h3>
+            <p>We will cater any kind of party you can come up with! We have catered:</p>
+            <ul class="row">
+                <div class="col">
+                    <li>Anniversaries</li>
+                    <li>Baby Showers</li>
+                    <li>Barbecues</li>
+                    <li>Birthdays</li>
+                    <li>Buffets</li>
+                    <li>Business Meetings</li>
+                    <li>Cocktail Parties</li>
+                    <li>Engagement Parties</li>
+                    <li>Entertaining Guests</li>
+                </div>
+                <div class="col">
+                    <li>In-Home Catering</li>
+                    <li>International Cuisine</li>
+                    <li>Multi-Course Dinners</li>
+                    <li>Receptions</li>
+                    <li>Theme Parties</li>
+                    <li>Rehearsal Dinners</li>
+                    <li>Weddings</li>
+                    <li>Wedding Showers</li>
+                    <li>…and more!</li>
+                </div>
+            </ul>
+        </article>
+    </div>
+</div>
+<div class="card border-0 shadow my-1">
+    <div class="card-body m-3">
+        <div class="card border-0 shadow my-1" style="border-radius: 1em;">
+            <div class="card-body" style="background-color: #696969;border-radius: 1em;">
+                <article style="text-align: center; color: blanchedalmond;">
+                    <h2>We Cater in York Region, Durham Region & Toronto</h2>
+                    <p>We provide catering in Markham, Aurora, Newmarket, Stouffville, Richmond Hill, King City, Pickering, Ajax, Oshawa, Mississauga, Oakville, Burlington and Toronto. We have gone as far as Ottawa and Montreal for our clients. We promise
+                        to make your event memorable with great food and exceptional service!</p>
+                    <a href="{% url 'kc_app-contact' %}">
+                        <button type="button" class="btn btn-primary">If great food is what you want, please email us<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></button>
+                    </a>
+                </article>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -13,16 +13,16 @@ def cat_services(request):
     return render(request, 'kc_app/services.html', {'title': 'Services'})
 
 
-def order_online(request):
-    return render(request, 'kc_app/order_online.html', {'title': 'Order Online'})
+def menu(request):
+    return render(request, 'kc_app/menu.html', {'title': 'Menu'})
 
 
-def reviews(request):
+def blog(request):
     contexts = {
         'reviews_d': Review.objects.all(),
-        'title': 'Reviews',
+        'title': 'Blog',
     }
-    return render(request, 'kc_app/reviews.html', contexts)
+    return render(request, 'kc_app/blog.html', contexts)
 
 
 def contact_us(request):
